@@ -269,6 +269,9 @@ A: To create a synonym for an existing method that is more readable or appropria
 Q: How might you send a message to a private method of a receiver object from outside the scope of the receiver object?  
 A: `Object#send`
 
+Q: What are the three ways to invoke a method in Ruby?  
+A: `Object#send`, `Object#method(:method_name).call`, dot or period operator.
+
 Q: How would you typically prevent future modifications to an object?  
 A: `#freeze`
 
