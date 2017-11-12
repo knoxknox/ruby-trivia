@@ -470,6 +470,32 @@ A: Using `#is_a?` such as with `my_obj.is_a? MyModule`.
 Q: What does `Module#module_function` do?
 A: Makes class copies of the specified methods and makes instance methods private.
 
+Q: What is difference between `Class` vs `Module`?
+A: See table below.
+```
+--------------------------------------------------------------------------------
+|             | class                      | module                            |
+--------------------------------------------------------------------------------
+| init        | can be instantiated        | can not be instantiated           |
+--------------------------------------------------------------------------------
+| usage       | object creation            | mixin facility or namespace       |
+--------------------------------------------------------------------------------
+| methods     | class/instance methods     | module/instance methods           |
+--------------------------------------------------------------------------------
+| include     | cannot be included         | includes all instance methods as  |
+|             |                            | instance methods in class/module  |
+--------------------------------------------------------------------------------
+| extend      | can not extend with extend | extends given instance with       |
+|             | only with base inheritance | singleton methods from module     |
+--------------------------------------------------------------------------------
+| superclass  | module                     | object                            |
+--------------------------------------------------------------------------------
+| consists of | vars/methods/constants     | classes/methods/constants         |
+--------------------------------------------------------------------------------
+| inheritance | inherits behaviour         | no inheritance                    |
+--------------------------------------------------------------------------------
+```
+
 Structs
 -------------------------------------------------------------------------------
 
